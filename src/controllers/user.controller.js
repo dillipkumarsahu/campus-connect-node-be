@@ -6,7 +6,6 @@ import User from "../models/user.model";
  * 2. @getAllUser
  * 3. @updateUserDetails
  * 4. @deleteUser
- * 5. @authenticateUser
  **/
 
 /**
@@ -29,8 +28,18 @@ export const addUser = async (req, res, next) => {
 
   try {
     const user = await User.create(req.body);
-    delete user.password;
-    return res.status(201).json(user);
+    const updated_user = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      avatar: user.avatar,
+      avatar_bg_color: user.avatar_bg_color,
+      college_id: user.college_id,
+      created_at:user.createdAt,
+      updated_at:user.updatedAt
+
+    };
+    return res.status(201).json(updated_user);
   } catch (err) {
     return next(err);
   }
