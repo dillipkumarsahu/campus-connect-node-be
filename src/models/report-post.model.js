@@ -1,17 +1,18 @@
-
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const reportPostSchema = new Schema(
   {
     post_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: "Post",
       required: true,
     },
     user_id: {
-        type: String,
-        required: true,
-      },
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
   {
     timestamps: true, // Automatically adds createdAt and updatedAt fields

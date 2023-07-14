@@ -4,11 +4,13 @@ const Schema = mongoose.Schema;
 const collegeAdminSchema = new Schema(
   {
     user_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref:"User",
       required: true,
     },
     college_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref:"College",
       required: true,
     },
   },

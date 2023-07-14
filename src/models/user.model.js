@@ -23,7 +23,9 @@ const userSchema = new Schema(
       type: String,
     },
     college_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
   },
   {
