@@ -10,8 +10,9 @@ import userRouter from "./routes/user.routes";
 import authenticationRouter from "./authenticate";
 import collegeRouter from "./routes/college.routes";
 import collegeAdminRouter from "./routes/college-admin.routes";
-import postRoutes from "./routes/post.routs";
+import postRoutes from "./routes/post.routes";
 import postLikeRoutes from "./routes/post-like.routes";
+import postCommentRoutes from "./routes/post-comment.routes";
 
 
 dotenv.config();
@@ -28,7 +29,7 @@ app.use("/college", collegeRouter)
 app.use("/college-admin", collegeAdminRouter)
 app.use("/post", postRoutes)
 app.use("/post-like", postLikeRoutes)
-
+app.use("/post-comment", postCommentRoutes)
 
 
 

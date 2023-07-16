@@ -9,12 +9,12 @@ export const addPostLike= async (req, res, next) => {
     return res.status(201).json(postLike);
   } catch (err) {
     return next(err);
-  }jh
+  }
 };
 
 export const getAllpostLike = async (req, res, next) => {
     try {
-      const postLikeList = await PostLike.find().populate("college_id").populate("user_id");
+      const postLikeList = await PostLike.find().populate("post_id").populate("user_id");
       return res.status(200).json(postLikeList);
     } catch (err) {
       return next(err);
