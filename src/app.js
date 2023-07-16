@@ -10,6 +10,7 @@ import userRouter from "./routes/user.routes";
 import authenticationRouter from "./authenticate";
 import collegeRouter from "./routes/college.routes";
 import collegeAdminRouter from "./routes/college-admin.routes";
+import postRoutes from "./routes/post.routs";
 
 dotenv.config();
 const app = express();
@@ -23,6 +24,9 @@ app.use("/user", userRouter);
 app.use("/authentication", authenticationRouter);
 app.use("/college", collegeRouter)
 app.use("/college-admin", collegeAdminRouter)
+app.use("/post", postRoutes)
+
+
 
 
 // Connect to the database

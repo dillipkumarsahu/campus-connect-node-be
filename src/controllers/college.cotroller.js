@@ -1,4 +1,3 @@
-import bcrypt from "bcryptjs";
 import College from "../models/college.model";
 
 
