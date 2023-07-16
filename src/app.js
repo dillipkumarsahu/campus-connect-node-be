@@ -11,6 +11,8 @@ import authenticationRouter from "./authenticate";
 import collegeRouter from "./routes/college.routes";
 import collegeAdminRouter from "./routes/college-admin.routes";
 import postRoutes from "./routes/post.routs";
+import postLikeRoutes from "./routes/post-like.routes";
+
 
 dotenv.config();
 const app = express();
@@ -25,6 +27,8 @@ app.use("/authentication", authenticationRouter);
 app.use("/college", collegeRouter)
 app.use("/college-admin", collegeAdminRouter)
 app.use("/post", postRoutes)
+app.use("/post-like", postLikeRoutes)
+
 
 
 
