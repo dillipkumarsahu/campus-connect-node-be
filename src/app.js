@@ -8,6 +8,8 @@ import checkUserAuthentication from "./middlewares/common/checkUserAuthenticatio
 // import routers
 import userRouter from "./routes/user.routes";
 import authenticationRouter from "./authenticate";
+import collegeRouter from "./routes/college.routes";
+import collegeAdminRouter from "./routes/college-admin.routes";
 
 dotenv.config();
 const app = express();
@@ -19,6 +21,9 @@ app.use(checkUserAuthentication);
 // base routers
 app.use("/user", userRouter);
 app.use("/authentication", authenticationRouter);
+app.use("/college", collegeRouter)
+app.use("/college-admin", collegeAdminRouter)
+
 
 // Connect to the database
 connectDB();

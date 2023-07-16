@@ -56,7 +56,7 @@ export const addUser = async (req, res, next) => {
  */
 export const getAllUser = async (req, res, next) => {
   try {
-    const userList = await User.find().select("-password");
+    const userList = await User.find().select("-password").populate("college_id");
     return res.status(200).json(userList);
   } catch (err) {
     return next(err);
