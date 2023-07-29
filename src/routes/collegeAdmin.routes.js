@@ -4,7 +4,7 @@ import {
   deleteCollegeAdmin,
   getAllCollegeAdmin,
   updateCollegeAdmin,
-} from "../controllers/college-admin.controller";
+} from "../controllers/collegeAdmin.controller";
 
 const collegeAdminRouter = express.Router();
 

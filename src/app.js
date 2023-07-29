@@ -9,10 +9,12 @@ import checkUserAuthentication from "./middlewares/common/checkUserAuthenticatio
 import userRouter from "./routes/user.routes";
 import authenticationRouter from "./authenticate";
 import collegeRouter from "./routes/college.routes";
-import collegeAdminRouter from "./routes/college-admin.routes";
+import collegeAdminRouter from "./routes/collegeAdmin.routes";
 import postRoutes from "./routes/post.routes";
-import postLikeRoutes from "./routes/post-like.routes";
-import postCommentRoutes from "./routes/post-comment.routes";
+import postLikeRoutes from "./routes/postLike.routes";
+import postCommentRoutes from "./routes/postComment.routes";
+import savePostRoutes from "./routes/savedPost.routes";
+import reportPostRoutes from "./routes/reportPost.routes";
 
 
 dotenv.config();
@@ -30,6 +32,8 @@ app.use("/college-admin", collegeAdminRouter)
 app.use("/post", postRoutes)
 app.use("/post-like", postLikeRoutes)
 app.use("/post-comment", postCommentRoutes)
+app.use("/saved-post", savePostRoutes)
+app.use("/report", reportPostRoutes)
 
 
 

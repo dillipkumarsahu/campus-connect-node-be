@@ -3,7 +3,7 @@ import {
   addPostLike,
   deletePostLike,
   getAllpostLike,
-} from "../controllers/post-like.controller";
+} from "../controllers/postLike.controller";
 
 const postLikeRoutes = express.Router();
 

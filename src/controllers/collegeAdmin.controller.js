@@ -1,4 +1,4 @@
-import CollegeAdmin from "../models/college-admin.model";
+import CollegeAdmin from "../models/collegeAdmin.model";
 
 
 export const addCollegeAdmin = async (req, res, next) => {
@@ -9,7 +9,7 @@ export const addCollegeAdmin = async (req, res, next) => {
     return res.status(201).json(collegeAdmin);
   } catch (err) {
     return next(err);
-  }jh
+  }
 };
 
 export const getAllCollegeAdmin = async (req, res, next) => {

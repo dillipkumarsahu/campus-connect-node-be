@@ -4,7 +4,7 @@ import {
   deleteComment,
   getAllpostComment,
   updateComment,
-} from "../controllers/post-comment.controller";
+} from "../controllers/postComment.controller";
 
 const postCommentRoutes = express.Router();
 

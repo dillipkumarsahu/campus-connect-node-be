@@ -1,4 +1,4 @@
-import PostComment from "../models/post-comment.model";
+import PostComment from "../models/postComment.model";
 
 
 export const addPostComment= async (req, res, next) => {
